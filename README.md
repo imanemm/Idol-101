@@ -41,4 +41,4 @@ To play **Idol 101**, you'll need:
 - Implementing different endings based on player choices.
 
 ## Licenses
-This project is licensed under the MIT License. See the ([LICENSE](https://github.com/imanemm/Idol-101?tab=MIT-1-ov-file#)) file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/imanemm/Idol-101?tab=MIT-1-ov-file#) file for details.
