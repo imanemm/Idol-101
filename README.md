@@ -4,7 +4,7 @@ Welcome to **Idol 101**, a text-based Python game where players immerse themselv
 
 ## Game Overview
 
-Idol 101 lets you:
+**Idol 101** lets you:
 
 - Choose from different K-Pop idol positions, such as vocalist, dancer, or rapper.
 - Pick an entertainment company to join, each with unique paths and challenges.
