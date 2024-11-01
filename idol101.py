@@ -19,9 +19,9 @@ def intro():
     print("Let's start choosing with your stage name!")
     name = input("What's your stage name :")
     appuie_pour_continuer()
-    print("You will have to choose between dancer, singer and rapper. Better choose wisely...")
+    print("\nYou will have to choose between dancer, singer and rapper. Better choose wisely...")
     print(f"{name}, will you succeed debuting? We wish you the best luck in your quest of becoming the next global star!")
-    choice = input("Which position do you want to choose: ").lower
+    choice = input("Which position do you want to choose: ")
     return choice
 
 
@@ -31,7 +31,7 @@ def dancerpath():
     print("You auditioned for your school dance team.")
     print("You were picked!")
     appuie_pour_continuer()
-    print("Now you have to choose your entertainment label.")
+    print("\nNow you have to choose your entertainment label.")
     print("You have the choice between : a = Hybe, b = JYP and c = SM ")
     company_choice = input("Will you choose between a, b or c ?").lower()
 
@@ -41,7 +41,7 @@ def dancerpath():
         print("They were impressed by your language skills and your drive.")
         print("You've started training under the company, known for intense, structured training programs.")
         appuie_pour_continuer()
-        training_choice = input("Do you want to focus on (1) becoming popular or (2) improving your dance skills?")
+        training_choice = input("\nDo you want to focus on (1) becoming popular or (2) improving your dance skills?")
 
         if training_choice == "1":
             print("\nYou've gained a lot of fans, but your dancing skills are not up to par with your popularity :/")
@@ -55,7 +55,7 @@ def dancerpath():
         print("JYP is known for its emphasis on personality, teamwork, and “JYP Style” of training.")
         print("They loved how you thrive among others!")
         appuie_pour_continuer()
-        setback_choice = input("Oh no! You've been involved in a huge scandal that threatens your reputation. Do you wish to (1) ignore the scandal and lay low or (2) face it head-on?: ")
+        setback_choice = input("\nOh no! You've been involved in a huge scandal that threatens your reputation. Do you wish to (1) ignore the scandal and lay low or (2) face it head-on?: ")
 
         if setback_choice == "1":
             print("\nYou've stayed out of the spotlight and managed to make it, gaining a small but loyal fandom.")
@@ -70,7 +70,7 @@ def dancerpath():
         print("You've joined SM, where visuals and talent are prized above all.")
         print("They were impressed by your amazing visuals!")
         appuie_pour_continuer()
-        perseverance_choice = input("Do you wish to (1) stick with your members or (2) try to break it solo? ")
+        perseverance_choice = input("\nDo you wish to (1) stick with your members or (2) try to break it solo? ")
 
         if perseverance_choice == "1":
             print("\nYour teamwork paid off. You've debuted in a popular and solid K-pop group!")
@@ -90,7 +90,7 @@ def singerpath():
     print("Your classmates brag about your amazing vocal skills.")
     print("Due to your popular reputation, many companies recruited you.")
     appuie_pour_continuer()
-    print("You have the choice between : a = Hybe, b = JYP and c = SM ")
+    print("\nYou have the choice between : a = Hybe, b = JYP and c = SM ")
     company_choice = input("Will you choose between a, b or c ?").lower()
 
     if company_choice == "a":
@@ -98,7 +98,7 @@ def singerpath():
         print("They liked your drive and your leadership!")
         print("They decided to make you a part of their new debut team.")
         appuie_pour_continuer()
-        print("While promoting the new group, someone discovered something dark from your past.")
+        print("\nWhile promoting the new group, someone discovered something dark from your past.")
         print("Your history as a high school bully is threatens your position as a debut member.")
         scandalous_choice = input("\nDo you want to (1) cover it up or (2) admit to your mistakes and apologize?")
 
@@ -131,7 +131,7 @@ def singerpath():
             print("\nYou received tons of hate. They claim you are appropriating black culture.")
             print("You tried to explain yourself, but it was unconclusive...")
             appuie_pour_continuer()
-            redemption_choice = input("Do you wish to (1) host a media statement or (2) collab with a western artist to show your intentions?: ")
+            redemption_choice = input("\nDo you wish to (1) host a media statement or (2) collab with a western artist to show your intentions?: ")
 
             if redemption_choice == "1":
                 print("\nThey made fun of you!")
@@ -153,13 +153,13 @@ def singerpath():
         print("They dove into your past,found old pictures of you and noticied you went under the knife!")
         print("Your reputation took a hit.")
         appuie_pour_continuer()
-        visual_choice = input("Do you want to (1) start on campain on how to love yourself or (2) share a crying video of you on the web?: ")
+        visual_choice = input("\nDo you want to (1) start on campain on how to love yourself or (2) share a crying video of you on the web?: ")
         
         if visual_choice == "1":
-            print("")
+            print("\nYou did it. You addressed the toxic and complicated relationship the industry has with visuals. You changed the idol industry.")
             return "Global Sensation"
         elif visual_choice == "2":
-            print("")
+            print("\nYou realized that you don't want to keep working in this toxic environment and decided to quit.")
             return "Side Role"
     else:
         print("This is not an option. Please choose betwee a, b or c.")
@@ -227,19 +227,24 @@ def main():
 
             if choice == "dancer":
                 dancerpath()
+                ending = dancerpath()
+                display_ending(ending)
 
             elif choice == "singer":
                 singerpath()
+                ending = singerpath()
+                display_ending(ending)
 
             elif  choice == "rapper":
                 rapperpath()
+                ending = rapperpath()
+                display_ending(ending)
 
             else :
-                print("This is not an option. Please choose betwee a, b or c.")
+                print("This is not an option. Please choose betwee dancer, rapper or singer.")
                 start_game()
         #Début de la partie
         start_game()
-        display_ending(ending)
         #Propose une autre partie
         play_again = input("Do you want to play again? (yes/no): " ).lower()
 
