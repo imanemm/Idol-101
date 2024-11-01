@@ -122,7 +122,7 @@ def singerpath(name):
         
         if second_skill_choice == "1":
             print("\nEveryone is impressed, not everyone can excel in both singing and dancing!")
-            print("You've experienced some tensions from your group members, they're jalous of your sucess.")
+            print("You've experienced some tensions from your group members, they're jealous of your sucess.")
             print("However, you managed to resolve every conflits.")
             print("You dit it!")
 
@@ -283,7 +283,7 @@ def main():
 
             else :
                 print("This is not an option. Please choose betwee dancer, rapper or singer.")
-                start_game()
+                start_game() #Voir si on peut commencer au choix du skill au lieu du début!
         #Début de la partie
         start_game()
         #Propose une autre partie
