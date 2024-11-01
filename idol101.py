@@ -181,15 +181,16 @@ def rapperpath():
     if company_choice == "a":
         print("You were recruited by Hybe!")
         print("During one of the montly evaluations, you had to make your own song.")
-        print("You made it before so it is no problem for you.")
-        print("Except... Other trainees mocked you for making up fake opps.")
+        print("You made it before, so it's no problem for you.")
+        print("Except... other trainees mocked you for making up fake opps (slang for rivals).")
         appuie_pour_continuer()
         opps_choice = input("Do you want to (1) create a diss track about them or (2) ignore them? : ")
 
         if opps_choice == "1":
             print("You released the track and went viral!")
-            print("You become part of a hip-hop oriented group and become famous.")
+            print("You become part of a hip-hop-oriented group and become famous.")
             return "Global sensation"
+        
         elif opps_choice == "2":
             print("You couldn't take the humiliation and quit!")
             print("You still have nightmares about that day.")
@@ -197,34 +198,47 @@ def rapperpath():
     
     elif company_choice == "b":
         print("You were recruited by JYP!")
-        print("They fell in love with your creativity")
-        print("The compagny wants you to help produce the songs of your new debut team.")
+        print("They fell in love with your creativity.")
+        print("The company wants you to help produce songs of your new debut team.")
         print("You debuted as the leader of the new group.")
-        print("Someone noticied a uncanny similatude with a famous rap song.")
+        print("Someone noticied an uncanny similarity with a famous rap song.")
         appuie_pour_continuer()
         plagiat_choice = input("Do you wish to (1) admit that you sampled the song or (2) claim that it all came from you?: ")
 
         if plagiat_choice == "1":
-            print("Many came to your defense as sampling is a common practice in the industry.")
+            print("Many came to your defense, as sampling is a common practice in the industry.")
             print("Fans love you and your group!")
             appuie_pour_continuer()
             print("However, you prefer producing song over performing them.")
-            print("You become a famous producer, making songs for BTS, Blackpink, Seventeen and much more!")
+            print("You become a famous producer, making songs for BTS, Blackpink, Seventeen, and many more!")
             return "Side Role"
         
         elif plagiat_choice == "2":
             print("You were exposed!")
-            print("People critize you for lying when you could've come clean.")
+            print("People criticize you for lying when you could've come clean.")
             return "Quiet Retirement"
 
 
     elif company_choice == "c":
         print("You were recruited by SM!")
-        print("You have trained with SM for 2 long years.")
-        print("You were making beats in the studio when one of your songs leaked.")
-        print("They realised that you plageried the popular artist who help you get recruited...")
-        print("Unfortunatly, people were mad and the artist sued you.")
-        print("Game over...")
+        print("You have trained with SM for 7 long years.")
+        print("You finally debuted in a team when something happened.")
+        print("You were making beats in your studio when an artist released a diss track about you.")
+        print("He wants to start a beef (slang for feud).")
+        print("You need to make your move now!")
+        appuie_pour_continuer()
+        retaliation_choice = input("Do you want to (1) respond to the attack with peace and love or (2) drop your own diss track? : ")
+
+        if retaliation_choice == "1":
+            print("People are calling you soft and weak.")
+            print("They say you're not what the hip-hop industry stands for.")
+            return "Underground Star"
+        
+        elif retaliation_choice == "2":
+            print("All eyes are on you and the other artist.")
+            print("They find your beef super entertaining.")
+            print("Your rivalry went down in history, and you became even more famous than before.")
+            return "Global Sensation"
     else:
         print("This is not an option. Please choose betwee a, b or c.")
         rapperpath()
