@@ -10,7 +10,7 @@ def intro():
     name = input("What's your stage name :")
     print("You will have to choose between dancer, singer and rapper. Better choose wisely...")
     print(f"{name}, will you succeed debuting? We wish you the best luck in your quest of becoming the next global star!")
-    choice = input("Which position do you want to choose: ").lower
+    choice = input("Which position do you want to choose: ")
     return choice
 
 #Définition de la storyline en tant que dancer
@@ -129,19 +129,19 @@ def rapperpath():
 
 #Définition du jeu principal
 def start_game():
-    choice = intro()
+    choix = intro()
 
-    if choice == "dancer":
+    if choix == "dancer":
         dancerpath()
 
-    elif choice == "singer":
+    elif choix == "singer":
         singerpath()
 
-    elif  choice == "rapper":
+    elif  choix == "rapper":
         rapperpath()
 
     else :
-        print("This is not an option. Please choose betwee a, b or c.")
+        print("This is not an option. Please choose betwee dancer, singer or rapper.")
         start_game()
 
 start_game()
