@@ -118,13 +118,14 @@ def singerpath():
         print("You trained a year and half with them before they realized you were an ace.")
         print("The entertainment compagny made you a part of an already made debut group! ")
         appuie_pour_continuer()
-        second_skill_choice = input("\nIn order to become the K-pop \"It\ Idol, you need to take on another skill, do you want to work on (1) your dancing skill or (2) your rapping skill?: ")
+        second_skill_choice = input("\nIn order to become the K-pop \"It\" Idol, you need to take on another skill, do you want to work on (1) your dancing skill or (2) your rapping skill?: ")
         
         if second_skill_choice == "1":
-            print("\nEveryone is impressed, not even can excel in both singing and dancing!")
+            print("\nEveryone is impressed, not everyone can excel in both singing and dancing!")
             print("You've experienced some tensions from your group members, they're jalous of your sucess.")
             print("However, you managed to resolve every conflits.")
             print("You dit it!")
+
             return "Global Sensation"
         
         elif second_skill_choice == "2":
@@ -167,32 +168,55 @@ def singerpath():
 
 #Définition de la storyline en tant que rapper
 def rapperpath():
-    print("You have chosen the rapper path!")
+    print("\nYou have chosen the rapper path!")
     print("You are a popular underground rapper in Seoul.")
     print("Many people stream your songs on SoundCloud.")
     print("A popular celebrity posted one of your songs in his Instagram story.")
     print("Entertainment compagnies go through hell and back to recruite you.")
+    appuie_pour_continuer()
     print("You have the choice between : a = Hybe, b = JYP and c = SM ")
     company_choice = input("Will you choose between a, b or c ?").lower()
 
 
     if company_choice == "a":
-        print("You were recruited by Hybe and you trained for 2 months.")
+        print("You were recruited by Hybe!")
         print("During one of the montly evaluations, you had to make your own song.")
         print("You made it before so it is no problem for you.")
         print("Except... Other trainees mocked you for making up fake opps.")
-        print("You couldn't take the humiliation and quit!")
-        print("Game Over...")
+        appuie_pour_continuer()
+        opps_choice = input("Do you want to (1) create a diss track about them or (2) ignore them? : ")
+
+        if opps_choice == "1":
+            print("You released the track and went viral!")
+            print("You become part of a hip-hop oriented group and become famous.")
+            return "Global sensation"
+        elif opps_choice == "2":
+            print("You couldn't take the humiliation and quit!")
+            print("You still have nightmares about that day.")
+            return "Side Role"
     
     elif company_choice == "b":
         print("You were recruited by JYP!")
         print("They fell in love with your creativity")
         print("The compagny wants you to help produce the songs of your new debut team.")
-        print("You've met another trainee just like you.")
-        print("That trainee became your best friend!")
-        print("You finally debuted as the leader of a new group!")
-        print("Fans love you and your group!")
-        print("You win the game!")
+        print("You debuted as the leader of the new group.")
+        print("Someone noticied a uncanny similatude with a famous rap song.")
+        appuie_pour_continuer()
+        plagiat_choice = input("Do you wish to (1) admit that you sampled the song or (2) claim that it all came from you?: ")
+
+        if plagiat_choice == "1":
+            print("Many came to your defense as sampling is a common practice in the industry.")
+            print("Fans love you and your group!")
+            appuie_pour_continuer()
+            print("However, you prefer producing song over performing them.")
+            print("You become a famous producer, making songs for BTS, Blackpink, Seventeen and much more!")
+            return "Side Role"
+        
+        elif plagiat_choice == "2":
+            print("You were exposed!")
+            print("People critize you for lying when you could've come clean.")
+            return "Quiet Retirement"
+
 
     elif company_choice == "c":
         print("You were recruited by SM!")
@@ -226,17 +250,14 @@ def main():
             choice = intro()
 
             if choice == "dancer":
-                dancerpath()
                 ending = dancerpath()
                 display_ending(ending)
 
             elif choice == "singer":
-                singerpath()
                 ending = singerpath()
                 display_ending(ending)
 
             elif  choice == "rapper":
-                rapperpath()
                 ending = rapperpath()
                 display_ending(ending)
 
