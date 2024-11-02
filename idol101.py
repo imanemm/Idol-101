@@ -33,7 +33,7 @@ def dancerpath(name):
     appuie_pour_continuer()
     print("\nNow you have to choose your entertainment label.")
     print("You have the choice between : a = Hybe, b = JYP and c = SM ")
-    company_choice = input("Will you choose between a, b or c ?").lower()
+    company_choice = input("Will you choose between a, b or c ? ").lower()
 
     if company_choice == "a":
         print(f"\n{name}, you were chosen by Hybe.")
