@@ -60,6 +60,7 @@ def dancerpath(name):
         if setback_choice == "1":
             print("\nYou've stayed out of the spotlight and managed to make it, gaining a small but loyal fandom.")
             return "Underground Star"
+        
         elif setback_choice == "2":
             print("\nYou addressed the rumor. It turns out it was a false accusation...")
             print("You've made headline and everyone sympathizes with you.")
@@ -189,7 +190,7 @@ def rapperpath(name):
         if opps_choice == "1":
             print("\nYou released the track and went viral!")
             print("You become part of a hip-hop-oriented group and become famous.")
-            return "Global sensation"
+            return "Global Sensation"
         
         elif opps_choice == "2":
             print("\nYou couldn't take the humiliation and quit!")
